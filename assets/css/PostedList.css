@@ -1,13 +1,17 @@
 body{
     background:#EEEEEE;
+    display: flex; /* 子要素をflexboxで揃える */
+    flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+    justify-content: center; /* 子要素をflexboxにより中央に配置する */
+    align-items: center; 
 }
-.container{
+.container,.topic-container{
     margin: auto;
     display:flex;
     justify-content:center;
     flex-wrap: wrap;
 }
-.post{
+.post, .topic-post{
     position: relative;
     background:#ffffff;
     padding: 0px;
@@ -24,15 +28,15 @@ body{
     max-width:100%;
     max-height:100%;
 }
-.post h3{
+h3{
     margin: 0 5px;
 }
-.post h3 a{
+h3 a{ 
     word-break: normal;
     text-decoration :none;
     color:#444444;
 } 
-.post h3 a:hover{
+h3 a:hover{
     color:#222222;
 }
 .post-meta{
@@ -53,4 +57,22 @@ body{
 }
 .post-meta .data-time{
     color:#808080;
+}
+.navigation{
+    margin: 5px;
+    display:flex;
+    justify-content: space-around;
+}
+.screen-reader-text{
+    display: none;
+}
+.nav-links a{
+    direction: none;
+    border-radius: 1px #000;
+}
+
+.pick-up img{
+    position: absolute;
+    top: -30px;
+    right: -30px;
 }
