@@ -71,11 +71,8 @@
                 <p>記事はありません！</p>
             <?php endif; ?>
             </div><!-- /main -->
-            <?php the_posts_pagination(array(
-                'prev_text' => '◀',
-                'mid_size'  => 10,
-                'next_text' => '▶',
-                )); 
+            <?php 
+                wpbeginner_numeric_posts_nav();
             ?>
             <?//php get_footer(); ?> 
         </div>
