@@ -76,10 +76,6 @@ h3 a:hover{
 .screen-reader-text{
     display: none;
 }
-.nav-links a{
-    direction: none;
-    border-radius: 1px #000;
-}
 
 .pick-up img{
     position: absolute;
