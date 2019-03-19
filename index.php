@@ -4,8 +4,6 @@
         <meta charset="utf-8" />
         <title>TPUmarker</title>
         <meta name="TPUmarker" content="">
-        <link rel="stylesheet"  href="./assets/css/PostedList.css">
-        <link rel="stylesheet"  href="./style.css">
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/PostedList.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sidebar.css" type="text/css" />
@@ -71,11 +69,8 @@
                 <p>記事はありません！</p>
             <?php endif; ?>
             </div><!-- /main -->
-            <?php the_posts_pagination(array(
-                'prev_text' => '◀',
-                'mid_size'  => 10,
-                'next_text' => '▶',
-                )); 
+            <?php 
+                wpbeginner_numeric_posts_nav();
             ?>
             <?//php get_footer(); ?> 
         </div>

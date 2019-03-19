@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>TPUmarker</title>
-        <meta name="TPUmarker" content="">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/PostedList.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sidebar.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/single.css" type="text/css" />
-    </head>
-    <body>
+  <head>
+    <meta charset="utf-8" />
+    <title>TPUmarker</title>
+    <meta name="TPUmarker" content="">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/PostedList.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sidebar.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/single.css" type="text/css" />
+  </head>
+  <body>
     <?php get_sidebar(); ?>
-      <div class="container">
+    <div class="container">
       <div class="posts">
-        <?php
+      <?php
         if(have_posts()):
           while (have_posts()):
             the_post();
-             ?>
+      ?>
         <div class="single-post">
           <div class="single-post-header">
             <h3>
@@ -33,16 +33,18 @@
         </div>
       </div><!-- /posts -->
       <div class="navigation ">
-        <div class="prev" ><?php previous_post_link(); ?></div>
-        <div class="next"><?php next_post_link(); ?></div>
+        <div class="prev" ><?php previous_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
+        <div class="next"><?php next_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
       </div>
       <?php
       endwhile;
       else:
      ?>
-     <p>記事はありません！</p>
+      <p>記事はありません！</p>
    <?php endif; ?>
 
       
     </div><!-- /main -->
+  </body>
   <?php //get_footer(); ?>
+</html>
