@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.min.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page-post.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <?php if (is_singular()) wp_enqueue_script("comment-reply"); ?>
     </head>
     <body>
         <div class="contents">
@@ -39,32 +40,7 @@
                                     <div class="prev" ><?php previous_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
                                     <div class="next"><?php next_post_link('%link','%title <i class="fa fa-chevron-circle-right"></i>'); ?></div>
                                 </div>
-                                <div class="comment-data">
-                                    <h3>この記事へのコメント</h3>
-                                    <p>まだコメントはありません</p>
-                                </div>
-                                <div class="comment-area">
-                                    <p>* メールアドレスは公開されませんのでご安心ください。</p>
-                                    <p>* 名前とメールアドレスは必ずご記入をお願いします。</p>
-                                    <form action="#" method="post">
-                                        <div class="name">
-                                            <span>Name</span>
-                                            <input type="text" name="name" value="">
-                                        </div>
-                                        <div class="email">
-                                            <span>メールアドレス</span>
-                                            <input type="text" name="email" value="">
-                                        </div>
-                                        <div class="comment">
-                                            <span>コメント</span>
-                                            <textarea name="comment" rows="4" cols="40"></textarea>
-                                        </div>
-                                        <div class="submit">
-                                            <p>内容に問題なければ、下記の「コメントを送信する」ボタンを押してください。</p>
-                                            <input class="input-submit" type="submit" name="submit" value="コメントを送信">
-                                        </div>
-                                    </form>
-                                </div>
+                                <?php comments_template(); ?>
                             </div>
                     <?php
                         endwhile;
