@@ -2,12 +2,13 @@
 .main-contents {
   float: left;
   width: 75%;
+
   .main-content {
     width: 100%;
-    min-height: 996px;
+    min-height: 1065px;
     position: relative;
     display: inline-block;
-    margin: 20px;
+    margin: 20px 20px 0;
     padding: 20px 50px;
     background-color: #fff;
     border-radius: 12px;
@@ -22,6 +23,10 @@
         font-size: .8rem;
         span {
           padding-right: .5rem;
+          a {
+              color: #3C8DC5;
+              text-decoration: none;
+          }
         }
       }
     }
@@ -29,7 +34,7 @@
       margin-bottom: 5rem;
       .post-content {
         line-height: 2.5;
-        margin-bottom: 5rem;
+        margin-bottom: 2rem;
         a {
           font-size: .8rem;
           text-decoration: none;
@@ -48,7 +53,6 @@
       .navigation {
           display:block;
           margin: 20px;
-          align: center;
           text-align: center;
           .prev {
               margin-right: 100px;
@@ -75,10 +79,9 @@
                   }
               }
           }
-
       }
       .comment-data {
-        margin-bottom: 5rem;
+        margin: 3rem 0 5rem;
         h3 {
           font-size: 1.5rem;
           padding-bottom: 1.5rem;

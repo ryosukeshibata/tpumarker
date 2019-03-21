@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.min.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page-post.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     </head>
     <body>
         <div class="contents">
