@@ -1,7 +1,7 @@
 <div class="sidebar">
     <nav class="content">
         <div class="logo">
-            <a href="./index.html">
+            <a href="./">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/design/MarkerLogo.png" alt="">
             </a>
         </div>
