@@ -1,0 +1,188 @@
+/* Sidebar */
+.sidebar {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 280px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 10px #888;
+  &:before {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 50px solid #fff;
+    border-left: 50px solid rgba(238,238,238,1);
+  }
+  nav.content {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    .logo {
+      display: block;
+      width: 70%;
+      margin: 0 auto;
+      padding: 50px 0;
+      margin-bottom: 2rem;
+    }
+    .search-window {
+      display: block;
+      margin-bottom: 50px;
+      position: relative;
+      .searchform {
+        margin:0 auto;
+        width:250px;
+        position:relative;
+        .parts-search {
+          height: 36px;
+        }
+        .search-input {
+          border-radius:10px 0 0 10px;
+          background:#dfdfdf;
+          right:20%;
+          transition:all 0.3s;
+          width:20%;
+          border:none;
+          padding:6px;
+          position:absolute;
+          &:focus {
+            width:80%;
+            outline: none;
+          }
+        }
+
+        .search-submit {
+          border:none;
+          outline: none;
+          padding:10px;
+          position:absolute;
+          border-radius:0 10px 10px 0;
+          background:#0E7AC4;
+          color:#fff;
+          font-family:FontAwesome;
+          right:0;
+          width:20%;
+        }
+      }
+      .clearfix {
+          &:after {
+          content:"";
+          clear:both;
+          display:block;
+        }
+      }
+    }
+    .contents-list {
+      margin-bottom: 50px;
+      ul {
+          padding-left: 0;
+      }
+      li {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        list-style: none;
+        border-top: 1px solid #cacaca;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        &:last-child {
+          border-bottom: 1px solid #cacaca;
+        }
+        .category-ribbon {
+          display: inline-block;
+          float: left;
+          width: 5px;
+          height: 100%;
+        }
+        a {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          font: normal normal 700 16px/16px YuGothic,Hiragino Kaku Gothic ProN,-apple-system,BlinkMacSystemFont,Meiryo,sans-serif;
+          line-height: 60px;
+          color: #333;
+          text-decoration: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          -webkit-transition: -webkit-box-shadow .3s ease 0s;
+          transition: -webkit-box-shadow .3s ease 0s;
+          transition: box-shadow .3s ease 0s;
+          transition: box-shadow .3s ease 0s,-webkit-box-shadow .3s ease 0s;
+        }
+        .category-chevron {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          bottom: 0;
+          width: .8rem;
+          height: .8rem;
+          margin: auto 0;
+          border-top: 1px solid #cacaca;
+          border-right: 1px solid #cacaca;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .lecture-cancellation, .assistance {
+      text-align: center;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      img {
+        width: 100px;
+      }
+      .lecture {
+        ul {
+          list-style: none;
+        }
+        h2 {
+          font-size: 16px;
+        }
+      }
+      .lecture-date {
+        text-align: left;
+        .lecture-data {
+          text-align: right;
+          font-size: 14px;
+        }
+      }
+    }
+    .recruitment {
+      text-align: center;
+      margin-top: 80px;
+      padding-bottom: 80px;
+      button {
+        width: 90%;
+        height: 70px;
+        font-size: 26px;
+        font-weight: bolder;
+        background-color: #35a8ff;
+        color: #fff;
+        border-radius: 8px;
+        outline: none;
+        box-shadow: 0 17px 10px -10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        transition: all ease-in-out 300ms;
+        &:hover {
+          box-shadow: 0 37px 20px -20px rgba(0, 0, 0, 0.2);
+          transform: translate(0, -5px);
+        }
+        &:active {
+          box-shadow: 0 27px 15px -15px rgba(0, 0, 0, 0.4);
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

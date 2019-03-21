@@ -1,0 +1,14 @@
+@import "footer";
+@import "parts-sidebar";
+/* All Contents */
+body {
+  background-color: #eee;
+}
+img {
+  width: 100%;
+}
+.contents {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
