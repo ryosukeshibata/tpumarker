@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1280">
     <title>TPUmarker</title>
     <link rel="shortcut icon" type="image/x-icon" href="http://tpumarker.net/wp-content/themes/tpumarker-update-ver1/assets/img/design/MarkerLogo.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
