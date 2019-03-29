@@ -4,7 +4,7 @@
             <h2>サイトマップ</h2>
             <ul>
                 <li>
-                    <a href="index.html">ホーム</a>
+                    <a href="http://tpumarker.net/">ホーム</a>
                 </li>
                 <li>
                     <a href="#">休講・補講情報</a>
@@ -13,10 +13,10 @@
                     <a href="#">電子掲示板</a>
                 </li>
                 <li>
-                    <a href="recruitment-wanted.html">記者募集</a>
+                    <a href="http://tpumarker.net/メンバー募集/">記者募集</a>
                 </li>
                 <li>
-                    <a href="tpumarker.html">TPUMarkerとは？</a>
+                    <a href="http://tpumarker.net/tpumarkerとは？/">TPUMarkerとは？</a>
                 </li>
             </ul>
         </div>
