@@ -1,4 +1,4 @@
-<?php wp_head(); ?>
+<?php get_header(); ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page-post.min.css">
     <?php if (is_singular()) wp_enqueue_script("comment-reply"); ?>
 </head>
