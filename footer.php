@@ -21,7 +21,9 @@
             </ul>
         </div>
         <div class="twitter">
-            <img src="assets/img/design/image-twitter.png" alt="">
+            <div class="plugin">
+              <a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" href="https://twitter.com/tpumarker">Tweets by TPU marker</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
         <div class="copyright">
             <p>Copyright 2017~ CoreCreativeManager All Rights Reserved.</p>
