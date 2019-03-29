@@ -27,7 +27,7 @@
                                     <?php
                                     if (has_post_thumbnail()):
                                     ?>
-                                        <?php the_post_thumbnail(array(100, 100)); ?>
+                                        <?php the_post_thumbnail(array(280, 186)); ?>
                                     <?php
                                     else:
                                     ?>

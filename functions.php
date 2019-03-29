@@ -104,4 +104,5 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul></div>' . "\n";
 
 }
+set_post_thumbnail_size( 280, 186, true );
 ?>
