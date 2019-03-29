@@ -9,8 +9,9 @@ footer {
     border-top: 6px double #ff5f3a;
     text-align: center;
     .site-map {
+      box-sizing: unset;
       float: left;
-      width: 50%;
+      width: 30%;
       padding: 0 10%;
       padding-top: 50px;
       font-weight: bold;
