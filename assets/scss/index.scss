@@ -51,6 +51,9 @@
           overflow-y: hidden;
           line-height: 1.25;
           font: normal normal 500 13px/18px YuGothic,Hiragino Kaku Gothic ProN,-apple-system,BlinkMacSystemFont,Meiryo,sans-serif;
+          p img {
+            display: none;
+          }
         }
         .post-date {
           position: absolute;
