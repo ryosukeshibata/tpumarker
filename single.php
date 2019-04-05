@@ -1,48 +1,46 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>TPUmarker</title>
-        <meta name="TPUmarker" content="">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/PostedList.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sidebar.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/single.css" type="text/css" />
-    </head>
-    <body>
-    <?php get_sidebar(); ?>
-      <div class="container">
-      <div class="posts">
-        <?php
-        if(have_posts()):
-          while (have_posts()):
-            the_post();
-             ?>
-        <div class="single-post">
-          <div class="single-post-header">
-            <h3>
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h3>
-            <div class="single-post-meta">
-              <?php echo get_the_date(); ?>【<?php the_category(','); ?>】
+<?php get_header(); ?>
+<?php wp_head()?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page-post.min.css">
+    <?php if (is_singular()) wp_enqueue_script("comment-reply"); ?>
+</head>
+<body>
+    <div class="contents">
+        <?php get_sidebar(); ?>
+        <div class="main-contents">
+            <div class="main-content">
+                <?php
+                if(have_posts()):
+                    while (have_posts()):
+                        the_post();
+                ?>
+                        <div class="title-area">
+                            <h2 class="title"><?php the_title(); ?></h2>
+                            <div class="post-data">
+                                <span>投稿者 : <?php the_author_nickname(); ?></span>
+                                <span>投稿日 : <?php echo get_the_date(); ?> 【<?php the_category(','); ?>】</span>
+                                <span>アクセス数 : <?php if(function_exists('the_views')) { the_views(); } ?></span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="post-content">
+                                <?php the_content(); ?>
+                                <a href="#">記事一覧に戻る</a>
+                            </div>
+                            <div class="navigation ">
+                                <div class="prev" ><?php previous_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
+                                <div class="next"><?php next_post_link('%link','%title <i class="fa fa-chevron-circle-right"></i>'); ?></div>
+                            </div>
+                            <?php comments_template(); ?>
+                        </div>
+                <?php
+                    endwhile;
+                else:
+                ?>
+                    <p>記事はありません！</p>
+                <?php endif; ?>
             </div>
-          </div>
-          <div class="single-post-conternt">
-            <?php the_content(); ?>
-          </div>
         </div>
-      </div><!-- /posts -->
-      <div class="navigation ">
-        <div class="prev" ><?php previous_post_link(); ?></div>
-        <div class="next"><?php next_post_link(); ?></div>
-      </div>
-      <?php
-      endwhile;
-      else:
-     ?>
-     <p>記事はありません！</p>
-   <?php endif; ?>
-
-      
-    </div><!-- /main -->
-  <?php //get_footer(); ?>
+    </div>
+    <?php get_footer(); ?>
+</body>
+</html>

@@ -1,83 +1,51 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>TPUmarker</title>
-        <meta name="TPUmarker" content="">
-        <link rel="stylesheet"  href="./assets/css/PostedList.css">
-        <link rel="stylesheet"  href="./style.css">
-        <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/PostedList.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/sidebar.css" type="text/css" />
-    </head>
-    <body>
+<?php get_header(); ?>
+<?php wp_head()?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.min.css" type="text/css" />
+</head>
+<body>
+    <div class="contents">
         <?php get_sidebar(); ?>
-        <div class="main">
-            <?php// get_header(); ?>   
-            <div class="topic-container">
-            <?php
-                $example_posts = get_posts('cat="ほげ"post_type=post&posts_per_page=3');  
-                ?>
-            <?php
-            foreach ( $example_posts as $post ):
-                setup_postdata($post);?>
-                <div class="topic-post">
-                    <div class="pick-up"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/new.png" width="70" height="70"></div>
-                    <div class="post-image"><a href="<?php the_permalink(); ?>">
-                    <?php if (has_post_thumbnail()): ?>
-                    <?php the_post_thumbnail(array(100, 100)); ?>
-                    <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.png" width="100" height="100">
-                    <?php endif; ?>
-                    </a></div>
-                    <h3>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h3>
-                    <div class="post-meta">
-                        <div class="category"><?php the_category(' '); ?></div>
-                        <div class="data-time"><?php echo get_the_date(); ?></div>
-                    </div>
-                </div>
-                <?php endforeach;
-                wp_reset_postdata(); ?>
-            </div>
-            <div class="container">
+        <div class="topics">
+            <ul class="topic-contents">
                 <?php
                 if(have_posts()):
                     while (have_posts()):
                         the_post();
-                    ?>
-                <div class="post">
-                    
-                    <div class="post-image"><a href="<?php the_permalink(); ?>">
-                    <?php if (has_post_thumbnail()): ?>
-                    <?php the_post_thumbnail(array(100, 100)); ?>
-                    <?php else: ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/noimage.png" width="100" height="100">
-                    <?php endif; ?>
-                    </a></div>
-                    <h3>
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h3>
-                    <div class="post-meta">
-                        <div class="category"><?php the_category(' '); ?></div>
-                        <div class="data-time"><?php echo get_the_date(); ?></div>
-                    </div>
-                </div>
+                ?>
+                        <li class="topic-content">
+                            <div class="topic-data">
+                                <?php
+                                if (has_post_thumbnail()):
+                                ?>
+                                    <?php the_post_thumbnail(array(280, 186)); ?>
+                                <?php
+                                else:
+                                ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnails/empty.png" alt="" class="post-thumbnail">
+                                <?php endif; ?>
+                                <div class="post-title"><?php the_title(); ?></div>
+                                <div class="post-excerpt"><?php the_content('More ...'); ?></div>
+                                <div class="post-date"><?php echo get_the_date(); ?></div>
+                            </div>
+                            <a href="<?php the_permalink() ?>" class="post-link"></a>
+                            <ul class="post-categories">
+                                <li class="post-category">
+                                    <?php the_category(' '); ?>
+                                </li>
+                            </ul>
+                        </li>
                 <?php
-                endwhile;
+                    endwhile;
                 else:
+                ?>
+                    <p class="no-content">記事はありません！</p>
+                <?php endif; ?>
+            </ul>
+            <?php
+                wpbeginner_numeric_posts_nav();
             ?>
-                <p>記事はありません！</p>
-            <?php endif; ?>
-            </div><!-- /main -->
-            <?php the_posts_pagination(array(
-                'prev_text' => '◀',
-                'mid_size'  => 10,
-                'next_text' => '▶',
-                )); 
-            ?>
-            <?//php get_footer(); ?> 
         </div>
-    </body>
+    </div>
+    <?php get_footer(); ?>
+</body>
 </html>
