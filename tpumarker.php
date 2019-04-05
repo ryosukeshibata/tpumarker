@@ -4,6 +4,7 @@ Template Name:tpumarker
 */
 ?>
 <?php get_header(); ?>
+<?php wp_head()?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/tpumarker.min.css">
 </head>
 <body>
