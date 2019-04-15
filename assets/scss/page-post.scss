@@ -63,16 +63,22 @@
                   padding-right: 10px;
               }
               .fa-chevron-circle-right {
-                  padding-left: 10px;
+                  padding-right: 10px;
               }
               a {
                   color: #fff;
                   text-decoration:none;
                   background-color: #6FB7E9;
                   border-radius: 3px;
+                  display: inline-block;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-align: start;
+                  text-overflow: ellipsis;
                   cursor: pointer;
                   padding: 12px;
                   padding: 0.75rem;
+                  width: 350px;
                   &:hover {
                       background-color: #3C8DC5;
                   }
@@ -147,7 +153,7 @@
                       display:block;
                       height:0;
                       clear:both;
-                      isibility:hidden;
+                      visibility:hidden;
                   }
               }
                p {

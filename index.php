@@ -14,15 +14,18 @@
                 ?>
                         <li class="topic-content">
                             <div class="topic-data">
+                                <div class="trim-wrap">
                                 <?php
                                 if (has_post_thumbnail()):
                                 ?>
-                                    <?php the_post_thumbnail(array(280, 186)); ?>
+                                
+                                    <?php the_post_thumbnail(); ?>
                                 <?php
                                 else:
                                 ?>
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnails/empty.png" alt="" class="post-thumbnail">
                                 <?php endif; ?>
+                                </div>
                                 <div class="post-title"><?php the_title(); ?></div>
                                 <div class="post-excerpt"><?php the_content('More ...'); ?></div>
                                 <div class="post-date"><?php echo get_the_date(); ?></div>

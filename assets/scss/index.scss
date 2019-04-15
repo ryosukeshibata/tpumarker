@@ -34,12 +34,27 @@
         background-color: #fff;
         border-radius: 12px;
         box-shadow: 4px 4px 8px #888;
-        img {
+        .trim-wrap{
+          position:relative;
+          width:280px;
+          height:0;
+          padding-bottom:66.5%;/* 幅に対する縦のサイズ */
+          overflow:hidden;
+          background-color:#ccc;
+          img {
+              display: block;
+              position:absolute;
+              top:50%;
+              left:50%;
+              transform:translate(-50%,-50%);
+              width:auto;
+              height:auto;
+              max-width:119%;/* 横向き16:9の画像が表示エリア一杯になるように指定 */
+              max-height:initial;
+          }
+          .post-thumbnail {
             display: block;
-            min-height: 186px;
-        }
-        .post-thumbnail {
-          display: block;
+          }
         }
         .post-title {
           padding: 0 20px;
