@@ -27,8 +27,8 @@
                                 <a href="#">記事一覧に戻る</a>
                             </div>
                             <div class="navigation ">
-                                <div class="prev" ><?php previous_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
-                                <div class="next"><?php next_post_link('%link','<i class="fa fa-chevron-circle-right"></i> %title'); ?></div>
+                                <div class="prev" ><?php next_post_link('%link','<i class="fa fa-chevron-circle-left"></i> %title'); ?></div>
+                                <div class="next"><?php previous_post_link('%link','%title <i class="fa fa-chevron-circle-right"></i>'); ?></div>
                             </div>
                             <?php comments_template(); ?>
                         </div>

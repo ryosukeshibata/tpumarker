@@ -51,8 +51,8 @@
         }
       }
       .navigation {
+          width: 100%;
           display:block;
-          margin: 20px;
           text-align: center;
           .prev {
               margin-right: 100px;
@@ -60,11 +60,13 @@
           .prev,
           .next {
               display: inline-block;
+              width: 28%;
               .fa-chevron-circle-left {
                   padding-right: 10px;
               }
               .fa-chevron-circle-right {
-                  padding-right: 10px;
+                  float: right;
+                  margin-top: .25rem;
               }
               a {
                   color: #fff;
@@ -79,7 +81,7 @@
                   cursor: pointer;
                   padding: 12px;
                   padding: 0.75rem;
-                  width: 350px;
+                  width: 100%;
                   &:hover {
                       background-color: #3C8DC5;
                   }
