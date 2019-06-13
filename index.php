@@ -1,49 +1,63 @@
 <?php get_header(); ?>
 <?php wp_head()?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/index.min.css" type="text/css" />
-</head>
-<body>
     <div class="contents">
-        <?php get_sidebar(); ?>
-        <div class="topics">
-            <ul class="topic-contents">
+        <div class="contents-header">
+            <h1 class="contents-title">記事一覧</h1>
+        </div>
+        <div class="topic">
+            <div class="topic-list">
                 <?php
                 if(have_posts()):
                     while (have_posts()):
                         the_post();
                 ?>
-                        <li class="topic-content">
-                            <div class="topic-data">
-                                <div class="trim-wrap">
-                                <?php
-                                if (has_post_thumbnail()):
-                                ?>
-                                
-                                    <?php the_post_thumbnail(); ?>
-                                <?php
-                                else:
-                                ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnails/empty.png" alt="" class="post-thumbnail">
+                <section class="topic-section">
+                    <div class="card">
+                        <div class="card-thumb">
+                            <a href="<?php the_permalink() ?>" class="card-link">
+                            <?php
+                            if (has_post_thumbnail()):
+                            ?>        
+                            <?php the_post_thumbnail(); ?>
+                            <?php
+                            else:
+                            ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnails/empty.png" alt="" class="no-image">
                                 <?php endif; ?>
-                                </div>
-                                <div class="post-title"><?php the_title(); ?></div>
-                                <div class="post-excerpt"><?php the_content('More ...'); ?></div>
-                                <div class="post-date"><?php echo get_the_date(); ?></div>
+                                </a>
                             </div>
-                            <a href="<?php the_permalink() ?>" class="post-link"></a>
-                            <ul class="post-categories">
-                                <li class="post-category">
-                                    <?php the_category(' '); ?>
-                                </li>
-                            </ul>
-                        </li>
+                            <h2 class="card-title">
+                                <a href="<?php the_permalink() ?>" class="card-link"><?php the_title(); ?></a>
+                            </h2>
+                            <div class="card-date"><?php echo get_the_date('Y.m.d'); ?></div>
+                            <a href="<?php the_permalink() ?>" class="card-link"></a>
+                            <div class="card-category">
+                                <?php the_category(' ');?>
+                                <script>
+                                $(function(){
+                                    //タグの数が３つを超えると非表示にする
+                                    //card-categoryの要素毎に処理する
+                                    $(".card-category").each(function () {
+                                        var num = $(this).find('a').length;
+                                        if(num>3){
+                                            var i;
+                                            for(i=3;i<=num;i++){
+                                                $(this).find('a').eq(i).css('display','none');
+                                            }
+                                        }
+                                    }); 
+                                });
+                                </script>
+                            </div>
+                        </div>
+                    </section>
                 <?php
                     endwhile;
                 else:
                 ?>
                     <p class="no-content">記事はありません！</p>
                 <?php endif; ?>
-            </ul>
+            </div>
             <?php
                 wpbeginner_numeric_posts_nav();
             ?>

@@ -5,13 +5,10 @@ Template Name:tpumarker
 ?>
 <?php get_header(); ?>
 <?php wp_head()?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/tpumarker.min.css">
-</head>
-<body>
     <div class="contents">
-        <?php get_sidebar(); ?>
-        <div class="main-contents">
-            <div class="main-content">
+        <?php //get_sidebar(); ?>
+        <div class="page-contents">
+            <div class="page-content">
                 <div class="content">
                     <h2>TPUMarkerとは？</h2>
                     <p>TPU markerは富山県立大学（以下、県大）の学生が県大やその周辺の出来事を学生目線で記事にし、紹介するニュースサイトです。現在は、学生団体Core Creative Managerが運営を行っています。大学事務局などは運営に関わっておりません。</p>

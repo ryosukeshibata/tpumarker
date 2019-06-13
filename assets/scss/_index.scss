@@ -1,0 +1,221 @@
+@import "color";
+@mixin breakpoint ($value) {
+  @if $value == 'phone' {
+    @media only screen and (min-width: 120px) and (max-width: 767px) { @content; }
+  } @else if $value == 'tablet' {
+    @media only screen and (min-width: 768px) and (max-width: 1024px) { @content; }
+  } @else if $value == 'touch' {
+    @media only screen and (min-width: 120px) and (max-width: 1024px) { @content; }
+  } @else if $value == 'desktop' {
+    @media only screen and (min-width: 1025px) { @content; }
+  } @else {
+    @media only screen and (max-width: $value) { @content; }
+  }
+}
+/* Main */
+.contents {
+  width: 70%;
+  margin: 0 auto;
+}
+.contents-header {
+  border-bottom: 2px solid $base-color-300;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  margin-bottom: 40px;
+  color: $base-color-600;
+}
+.topic {
+  margin-bottom: 60px;
+  &-list {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    .no-content {
+      margin-bottom: 500px; 
+    }
+  }
+}
+.topic-section {
+  margin: 0 auto;
+}
+.card {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $base-color-200; 
+  width: 330px;
+  height: 410px;
+  position: relative;
+  &-thumb {
+    margin: 5px;
+    width: 320;
+    margin-bottom: 20px;
+    img {
+      display: block;
+      border-radius: 4px;
+      width: 320px; /* 任意の幅を指定 */
+      height: 200px; /* 任意の高さを指定 */
+      object-fit: cover;
+    }
+  }
+  &-cate-title {
+    //catrgories.php表示するときのみ使用
+    font-weight: bold;
+    font-size: 24px;
+  }
+  //三行以上のカテゴリはなかったことにする　はじまり
+  &-title {
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+    //text-align: justify;
+  }
+  &-title :before {
+    content: "";
+    bottom: 0;
+    right: 0;
+  }
+  &-title:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+  }
+  //三行以上のものはなかったことにする　ここまで
+  &-title {
+    color: $base-color-500;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 18px;
+  }
+  &-date {
+    color: $base-color-400;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  &-category {
+    a {
+      overflow: hidden;
+      color: $sub-color;
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+.cate-card {
+  height: 300px;
+}
+//ページネイション（プラグイン）
+.pagination-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.pagination {
+  display: inline-block;
+  height: 70px;
+  margin-top: 70px;
+  padding: 0 25px;
+  border-radius: 35px;
+  background-color: #fff;
+
+  @include breakpoint(1000px) {
+    height: 50px;
+    margin-top: 50px;
+    padding: 0 10px;
+    border-radius: 25px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.page-numbers {
+  display: block;
+  padding: 0 20px;
+  float: left;
+  transition: 400ms ease;
+  color: #595959;
+  font-size: 18x;
+  letter-spacing: 0.1em;
+  line-height: 70px;
+
+  &:hover,
+  &.current {
+    background-color: #35a8ff;
+    color: #fff;
+  }
+
+  &.prev:hover,
+  &.next:hover {
+    background-color: transparent;
+    color: #35a8ff;
+  }
+
+  @include breakpoint(1000px) {
+    padding: 0 15px;
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  @include breakpoint(touch) {
+    padding: 0 14px;
+    display: none;
+
+    &:nth-of-type(2) {
+      position: relative;
+      padding-right: 50px;
+
+      &::after {
+        content: '...';
+        position: absolute;
+        font-size: 25px;
+        top: 0;
+        left: 45px;
+      }
+    }
+
+    &:nth-child(-n+3),
+    &:nth-last-child(-n+3) {
+      display: block;
+    }
+
+    &:nth-last-child(-n+4) {
+      padding-right: 14px;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+/*pagenation*/
+
+
+.navigation ul {
+    display: block;
+    text-align: center;
+    li {
+        display: inline;
+        a,
+        a:hover,
+        &.active a,
+        &.disabled {
+            color: $white;
+            text-decoration:none;
+            background-color: $sub-color;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 12px;
+        }
+
+        a:hover,
+        &.active a {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+}

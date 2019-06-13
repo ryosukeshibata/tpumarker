@@ -5,13 +5,10 @@ Template Name:recruitment-wanted
 ?>
 <?php get_header(); ?>
 <?php wp_head()?>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/tpumarker.min.css">
-</head>
-<body>
     <div class="contents">
-        <?php get_sidebar(); ?>
-        <div class="main-contents">
-            <div class="main-content">
+        <?php// get_sidebar(); ?>
+        <div class="page-contents">
+            <div class="page-content">
                 <div class="content">
                     <h2>TPUmarker記者募集中!!</h2>
                     <p>TPUmarkerの記者を募集しています。「情報を発信することが好き」、「写真を撮るのが好き」、「一緒に活動する仲間を集めたい」 「サークルやイベントの情報を発信したい」という方にオススメです。現在、約10名が記者として様々な情報を発信しています。 </p>

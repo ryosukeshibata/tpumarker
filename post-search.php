@@ -10,9 +10,9 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.min.css">
-    <link rel="stylesheet" href="./assets/css/index.min.css">
-    <link rel="stylesheet" href="./assets/css/search.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 <body>

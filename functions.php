@@ -104,5 +104,14 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul></div>' . "\n";
 
 }
-set_post_thumbnail_size( 280, 186, true );
+//管理画面でアイキャッチを設定するときの設定　
+//set_post_thumbnail_size( 320, 240, true );
+/*【管理画面】メディアを追加で挿入されるimgタグから不要な属性を削除 */
+add_filter('image_send_to_editor', 'remove_image_attribute', 10);
+add_filter('post_thumbnail_html', 'remove_image_attribute', 10);
+function remove_image_attribute($html){
+  $html = preg_replace('/(width|height)="\d*"\s/', '', $html); // width と heifht を削除
+  return $html;
+}
+add_filter( 'show_admin_bar', '__return_false' );
 ?>

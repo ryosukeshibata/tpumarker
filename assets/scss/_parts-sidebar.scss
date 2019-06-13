@@ -7,15 +7,6 @@
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 4px 8px 10px #888;
-  &:before {
-    content: "";
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom: 50px solid #fff;
-    border-left: 50px solid rgba(238,238,238,1);
-  }
   nav.content {
     width: 100%;
     background-color: #fff;
@@ -75,59 +66,67 @@
       }
     }
     .contents-list {
+      width: 100%;
       margin-bottom: 50px;
-      ul {
-          padding-left: 0;
+      .site-map {
+        margin: 0 auto;
+        box-sizing: unset;
+        padding: 0 10%;
+        padding-top: 50px;
+        font-weight: bold;
+        font-size: 14px;
+        h2 {
+          color: #0068b7;
+          margin-bottom: 10px;
+          padding-bottom: 0px;
+          border-bottom: 2px solid #0068b7;
+          text-align: left;
+          &:before {
+            display: block;
+            float: left;
+            margin-top: 4px;
+            margin-right: 15px;
+            content: '　';
+            height: 1em;
+            width: 1em;
+            background: #0068b7;
+          }
+        }
+        ul {
+          margin-bottom: 20px;
+          text-align: left;
+          li {
+            font-size: 18px;
+            display: block;
+            font-weight: bolder;
+            margin-bottom: 5px;
+            margin-left: 20px;
+            &:before {
+              content: '>';
+              color: #0068b7;
+              font-weight: bold;
+              font-size: 14px;
+              line-height: 1em;
+              background: none;
+              margin-right: 10px;
+            }
+            a {
+              text-decoration: none;
+              color: #444;
+            }
+          }
+        }
       }
-      li {
-        position: relative;
-        display: block;
+      .twitter {
         width: 100%;
-        height: 60px;
-        text-align: center;
-        list-style: none;
-        border-top: 1px solid #cacaca;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        &:last-child {
-          border-bottom: 1px solid #cacaca;
+        h3{
+          width: 80%;
+          text-align: center; 
+          margin-bottom: 10px;
+          border-bottom: 2px solid #0068b7;
         }
-        .category-ribbon {
-          display: inline-block;
-          float: left;
-          width: 5px;
-          height: 100%;
-        }
-        a {
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          display: inline-block;
-          font: normal normal 700 16px/16px YuGothic,Hiragino Kaku Gothic ProN,-apple-system,BlinkMacSystemFont,Meiryo,sans-serif;
-          line-height: 60px;
-          color: #333;
-          text-decoration: none;
-          -webkit-box-shadow: none;
-          box-shadow: none;
-          -webkit-transition: -webkit-box-shadow .3s ease 0s;
-          transition: -webkit-box-shadow .3s ease 0s;
-          transition: box-shadow .3s ease 0s;
-          transition: box-shadow .3s ease 0s,-webkit-box-shadow .3s ease 0s;
-        }
-        .category-chevron {
-          position: absolute;
-          top: 0;
-          right: 20px;
-          bottom: 0;
-          width: .8rem;
-          height: .8rem;
-          margin: auto 0;
-          border-top: 1px solid #cacaca;
-          border-right: 1px solid #cacaca;
-          -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+        img {
+          width: 40%;
         }
       }
     }
@@ -152,6 +151,42 @@
         .lecture-data {
           text-align: right;
           font-size: 14px;
+        }
+      }
+    }
+    .category{
+      width: 80%;
+      margin: 0 auto;
+      .side-title{
+        text-align: center; 
+        margin-bottom: 10px;
+        border-bottom: 2px solid #0068b7;
+      }
+    }
+    .post-categories {
+      margin: 5px;
+      li{
+        display: inline-block;
+        padding: 2px 0;
+        margin: 5px;
+        font: normal normal 500 13px/20px YuGothic,Hiragino Kaku Gothic ProN,-apple-system,BlinkMacSystemFont,Meiryo,sans-serif;
+        border-radius: 6px;
+        color: #fff;
+        border: 0;
+        background-color: #35a8ff;
+        a {
+          display: inline-block;
+          padding-left: 20px;
+          color: inherit;
+          text-decoration: none;
+          background-color: transparent;
+          &:not(:last-child):after {
+            content:' |';
+            padding-left: 19px;
+          }
+          &:last-child {
+            padding-right: 20px;
+          }
         }
       }
     }

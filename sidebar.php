@@ -1,10 +1,5 @@
 <div class="sidebar">
     <nav class="content">
-        <div class="logo">
-            <a href="http://tpumarker.net/">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/design/MarkerLogo.png" alt="">
-            </a>
-        </div>
         <!-- <div class="search-window">
             <form method="get" class="searchform clearfix" action="#">
                 <div class="parts-search">
@@ -14,40 +9,44 @@
             </form>
         </div> -->
         <div class="contents-list">
-            <ul>
-                <li class="univ">
-                    <div style="border-left: 10px solid #c7243a" class="category-ribbon"></div>
-                    <div class="category-chevron"></div>
-                    <a href="http://tpumarker.net/category/大学/">大学</a>
-                </li>
-                <li class="student">
-                    <div style="border-left: 10px solid #3a24c7" class="category-ribbon"></div>
-                    <div class="category-chevron"></div>
-                    <a href="http://tpumarker.net/category/学生/">学生</a>
-                </li>
-                <li class="region">
-                    <div style="border-left: 10px solid #3ac724" class="category-ribbon"></div>
-                    <div class="category-chevron"></div>
-                    <a href="http://tpumarker.net/category/地域/">地域</a>
-                </li>
-            </ul>
-        </div>
-        <div class="lecture-cancellation">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/design/kyuko.svg" alt="" width="">
-            <div class="lecture">
-                <p>Coming Soon...</p>
+            <div class="site-map">
+                <h2>サイトマップ</h2>
+                <ul>
+                    <li>
+                        <a href="http://tpumarker.net/">ホーム</a>
+                    </li>
+                    <li>
+                        <a href="#">休講・補講情報</a>
+                    </li>
+                    <li>
+                        <a href="#">電子掲示板</a>
+                    </li>
+                    <li>
+                        <a href="http://tpumarker.net/メンバー募集/">記者募集</a>
+                    </li>
+                    <li>
+                        <a href="http://tpumarker.net/tpumarkerとは？/">TPUMarkerとは？</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="assistance">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/design/hoko.svg" alt="" width="">
-            <div class="lecture">
-                <p>Coming Soon...</p>
-            </div>
-        </div>
+            <div class="twitter">
+                <h3 class="side-title">twitter</h3>
+                <div class="container">
+                    <div class="plugin">
+                        <a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" href="https://twitter.com/tpumarker">Tweets by TPU marker</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            　　     </div>
+                </div>
+        　　 </div>
+    　　</div>
+        
         <div class="recruitment">
             <button type="button" name="button">
                 <a href="http://tpumarker.net/メンバー募集/">記者募集</a>
             </button>
+        </div>
+        <div class="category">
+            <h3 class="side-title">カテゴリー</h3>
+            <?php the_category();?>
         </div>
     </nav>
 </div>

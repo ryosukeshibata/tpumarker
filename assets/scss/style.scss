@@ -1,15 +1,18 @@
+//setting
+@import "reset";
+@import "color";
+@import "base";
+//mixin
+@import "mixin";
+//module
+@import "header";
 @import "footer";
 @import "parts-sidebar";
-/* All Contents */
-body {
-  background-color: #eee;
-}
-img {
-  width: 100%;
-}
-.contents {
-  width: 95%;
-  margin: 0 auto;
-  padding-bottom: 30px;
-  overflow: hidden;
-}
+@import "search";
+
+//page
+@import "index";
+@import "single";
+@import "recruitment-wanted";
+@import "tpumarker";
+@import "page"
