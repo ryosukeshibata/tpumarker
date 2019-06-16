@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=1280">
     <title>TPUmarker</title>
-    <link rel="shortcut icon" type="image/x-icon" href="http://tpumarker.net/wp-content/themes/tpumarker-update-ver1/assets/img/design/MarkerLogo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://tpumarker.net/wp-content/themes/tpumarker-update-ver2/assets/img/design/MarkerLogo.png">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel='stylesheet' href='https://unpkg.com/ress/dist/ress.min.css'>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 <body>
     <div class="header">
         <div class="header-logo">
-            <a href="http://tpumarker.net/">
+            <a href="https://tpumarker.net/">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/design/MarkerLogo.png" alt="">
             </a>
         </div>
