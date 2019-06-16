@@ -41,9 +41,9 @@
             <?php if( is_category() ): ?>
             <?php  echo '<div class="header-list-item"><a class="single" href="">カテゴリ別</a></div>' ?>
             <?php endif; ?>
-            <div class="header-list-item"><a href="http://tpumarker.net/">ホーム</a></div>
-            <div class="header-list-item"><a href="http://tpumarker.net/categories/">カテゴリ</a></div>
-            <div class="header-list-item"><a href="http://tpumarker.net/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E5%8B%9F%E9%9B%86/">記者募集</a></div>
-            <div class="header-list-item"><a href="http://tpumarker.net/tpumarker%E3%81%A8%E3%81%AF%EF%BC%9F/">TPUmarkerとは?</a></div>
+            <div class="header-list-item"><a href="https://tpumarker.net/">ホーム</a></div>
+            <div class="header-list-item"><a href="https://tpumarker.net/categories/">カテゴリ</a></div>
+            <div class="header-list-item"><a href="https://tpumarker.net/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E5%8B%9F%E9%9B%86/">記者募集</a></div>
+            <div class="header-list-item"><a href="https://tpumarker.net/tpumarker%E3%81%A8%E3%81%AF%EF%BC%9F/">TPUmarkerとは?</a></div>
         </div>
     </div>
